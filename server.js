@@ -13,14 +13,6 @@ app.get('/', function (req, res) {
 })
 
 app.get('/:playerName', function(req, res) {  
-  
-  // ES6 not working with Node, wrong logic? refactor, cleaner than loop below
-  // data.players.find(player => {
-  //   if(player.name.last === req.params.playerName) {
-  //     res.send(player);
-  //   }
-  // });
-
   for(var i = 0; i < data.players.length; i++) {
     if(data.players[i].player.name.last === req.params.playerName) {
       res.send(data.players[i]);
