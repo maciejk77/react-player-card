@@ -16,7 +16,7 @@ class SearchList extends Component {
   }
 
   render() {
-    this.props.getPlayer(this.state.value);
+    this.props.getPlayer(this.state.selection);
 
     return (
       <select value={this.state.selection} onChange={this.handleChange}>
